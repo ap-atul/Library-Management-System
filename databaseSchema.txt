@@ -1,0 +1,31 @@
+CREATE TABLE `admins` (
+  `username` varchar(20) DEFAULT NULL,
+  `passwords` varchar(20) DEFAULT NULL
+);
+
+
+INSERT INTO `admins` VALUES ('admin','admin'),('ap','ap');
+
+CREATE TABLE `book` (
+  `name` varchar(20) DEFAULT NULL,
+  `author` varchar(20) DEFAULT NULL,
+  `publication` varchar(20) DEFAULT NULL,
+  `quantity` int(11) DEFAULT NULL
+);
+
+CREATE TABLE `issue` (
+  `s_name` varchar(20) DEFAULT NULL,
+  `s_roll` int(11) DEFAULT NULL,
+  `b_name` varchar(20) DEFAULT NULL,
+  `date_of_issue` date DEFAULT NULL
+);
+
+
+CREATE TABLE `librarian` (
+  `name` varchar(20) DEFAULT NULL,
+  `id` int(11) NOT NULL,
+  `address` varchar(20) DEFAULT NULL,
+  `contact` varchar(11) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+);
+
