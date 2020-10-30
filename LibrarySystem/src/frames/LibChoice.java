@@ -12,6 +12,7 @@ public class LibChoice {
 	JFrame frame;
 	Librarian_Page lp = new Librarian_Page();
 	IssuePage ip = new IssuePage();
+
 	/**
 	 * Launch the application.
 	 */
@@ -43,7 +44,7 @@ public class LibChoice {
 		frame.setBounds(100, 100, 450, 300);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.getContentPane().setLayout(null);
-		
+
 		JButton btnNewButton = new JButton("Book Entries");
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
@@ -51,9 +52,9 @@ public class LibChoice {
 				frame.setVisible(false);
 			}
 		});
-		btnNewButton.setBounds(152, 46, 150 , 36);
+		btnNewButton.setBounds(152, 46, 150, 36);
 		frame.getContentPane().add(btnNewButton);
-		
+
 		JButton btnStudentEntries = new JButton("Student Entries");
 		String t = btnStudentEntries.getText();
 		int s = t.length();
@@ -63,9 +64,9 @@ public class LibChoice {
 				frame.setVisible(false);
 			}
 		});
-		btnStudentEntries.setBounds(152, 129, s*10 , 36);
+		btnStudentEntries.setBounds(152, 129, s * 10, 36);
 		frame.getContentPane().add(btnStudentEntries);
-		
+
 		JButton btnBack = new JButton("Back");
 		btnBack.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {

@@ -1,6 +1,8 @@
 package frontPage;
 
 import java.awt.EventQueue;
+import java.awt.Window;
+
 import javax.swing.JFrame;
 import javax.swing.JTabbedPane;
 import javax.swing.JDesktopPane;
@@ -24,6 +26,8 @@ public class MainPage {
 	private JTable table;
 	private JTextField search;
 	private JTextField input_ip;
+	
+	private static MainPage window;
 	/**
 	 * Launch the application.
 	 */
@@ -31,7 +35,7 @@ public class MainPage {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					MainPage window = new MainPage();
+					window = new MainPage();
 					window.frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -81,6 +85,7 @@ public class MainPage {
 		input_ip = new JTextField();
 		input_ip.setColumns(10);
 		input_ip.setBounds(580, 10, 120, 30);
+		input_ip.setText(Student.getIp());
 		desktopPane_1.add(input_ip);
 
 		

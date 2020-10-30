@@ -9,7 +9,7 @@ import com.sun.rowset.CachedRowSetImpl;
 
 class Student{
 	@SuppressWarnings("unused")
-	private String ip = "127.0.0.1";
+	private static String ip = "127.0.0.1";
 	private static Socket socket = null;
 	
 	public static ResultSet call(String query, String ip) {
@@ -40,5 +40,9 @@ class Student{
 			}catch(Exception e){System.out.println(e);}
 			
 		return rs;
+	}
+	
+	public static String getIp() {
+		return ip;
 	}
 }
