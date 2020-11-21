@@ -112,7 +112,7 @@ public class MainPage {
 				String key = search.getText();
 				String s = input_ip.getText();
 				try {
-					String query = "select * from book where name = '" + key + "'";
+					String query = "select * from book where name LIKE '%" + key + "%'";
 					ResultSet rs = Student.call(query, s);
 					rs.next();
 					if(rs != null) {
